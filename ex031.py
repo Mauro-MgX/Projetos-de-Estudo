@@ -5,7 +5,7 @@ distancia = int(input('Digite a distencia da sua viagem ?'))
 
 if distancia <= 200 :
     valor = distancia * 0.50
-    print('O valor total da viagem vai ser de R${:.2f}'.format(valor))
 else:
     valor = distancia * 0.45
-    print('O valor total da viagem vai ser de R${:.2f}'.format(valor))
+print('O valor total da viagem vai ser de R${:.2f}'.format(valor))
+
