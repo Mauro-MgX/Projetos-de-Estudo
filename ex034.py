@@ -8,9 +8,8 @@ salario = float(input('Digite seu Salario: '))
 if salario <= 1250.00 :
     acrecimo = (salario * 15 /100)
     novo_salario  = salario + acrecimo
-    print('Seu novo salario é R${:.2f}'.format(novo_salario))
 else:  
     acrecimo = (salario * 10 /100)
-    novo_salario  = salario + acrecimo
-    print('Seu novo salario é R${:.2f}'.format(novo_salario))
+    novo_salario  = salario + acrecimo    
+print('Seu novo salario é R${:.2f}'.format(novo_salario))
   
