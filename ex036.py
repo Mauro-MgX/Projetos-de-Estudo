@@ -30,7 +30,7 @@ anos = int(input('Digite por quantos anos você pretente pagar essa casa: '))
 
 valor30 = salario * 30 / 100
 
-parcelas = valor_casa / anos
+parcelas = valor_casa / (anos * 12)
 
 #print(valor30)
 #print(parcelas)
@@ -50,7 +50,7 @@ else:
     print('{}Sinto muito!{}'.format(cores['vermelho'], cores['limpa']))
     print('{}O credito não foi aprovado!{}'.format(cores['vermelho'], cores['limpa'])) 
     print('-='*20)
-    print('O valor da parcela R${}{}{} é maior que o valor permitido para o seu salario!'.format(cores['vermelho'], parcelas, cores['limpa']))
+    print('O valor da parcela R${}{:.2f}{} é maior que o valor permitido para o seu salario!'.format(cores['vermelho'], parcelas, cores['limpa']))
 print('Tenha um bom dia!')
 
 
