@@ -45,12 +45,14 @@ if valor30 >= parcelas :
     print('{}O credito foi aprovado!{}'.format(cores['verde'], cores['limpa'])) 
     print('-='*20)
     print('O valor das parcelas para uma casa de R${}{:.2f}{} com uma renda mensal de R${}{:.2f}{} é de R${}{}{}.'.format(cores['vermelho'], valor_casa, cores['limpa'], cores['verde'], salario, cores['limpa'], cores['amarelo'], parcelas, cores['limpa'] ))
+    print('Empréstimo pode ser CONCEDIDO!')
 else:
     print('-='*20)
     print('{}Sinto muito!{}'.format(cores['vermelho'], cores['limpa']))
     print('{}O credito não foi aprovado!{}'.format(cores['vermelho'], cores['limpa'])) 
     print('-='*20)
     print('O valor da parcela R${}{:.2f}{} é maior que o valor permitido para o seu salario!'.format(cores['vermelho'], parcelas, cores['limpa']))
+    print('Empréstimo foi NEGADO!')
 print('Tenha um bom dia!')
 
 
