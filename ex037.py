@@ -39,14 +39,15 @@ sleep(3)
 if tipo == 1 :
     num_convertido = bin(num)
     print('Pronto!!')
-    print('O número {}{}{} em Decimal convertido para Binário ficou {}{}{}!'.format(cores['vermelho'], num, cores['limpa'], cores['vermelho'], num_convertido, cores['limpa'] ))
+    print('O número {}{}{} em Decimal convertido para Binário ficou {}{}{}!'.format(cores['vermelho'], num, cores['limpa'], cores['vermelho'], num_convertido [2:], cores['limpa'] ))
 elif tipo == 2:
     num_convertido = oct(num)
     print('Pronto!!')
-    print('O número {}{}{} em Decimal convertido para Octal ficou {}{}{}!'.format(cores['roxo'], num, cores['limpa'], cores['roxo'], num_convertido, cores['limpa'] ))
-else:        
+    print('O número {}{}{} em Decimal convertido para Octal ficou {}{}{}!'.format(cores['roxo'], num, cores['limpa'], cores['roxo'], num_convertido[2:], cores['limpa'] ))
+elif tipo == 3:        
     num_convertido = hex(num)
     print('Pronto!!')
-    print('O número {}{}{} em Decimal convertido para Hexadecimal ficou {}{}{}!'.format(cores['amarelo'], num, cores['limpa'], cores['amarelo'], num_convertido, cores['limpa'] ))
-
+    print('O número {}{}{} em Decimal convertido para Hexadecimal ficou {}{}{}!'.format(cores['amarelo'], num, cores['limpa'], cores['amarelo'], num_convertido[2:], cores['limpa'] ))
+else:
+    print('Opção invalida!')
 print('Obrigado por usar o sistema de conversão do {}Bot{}'.format(cores['azul'], cores['limpa']))
