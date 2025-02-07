@@ -35,7 +35,7 @@ print('Você já serviu ? \nDigite {}1{} para {}Sim{} e Digite {}2{} para {}Não
 serviu = int(input(': '))
 
 idade = ano_atual - ano
-
+falta = idade_alistamento - idade
 #print(idade)
 
 print('-='*20)
@@ -45,18 +45,23 @@ print('-='*20)
 sleep(3)
 
 if idade < idade_alistamento and serviu == 2 :
+    print('Quem nasceu em {}{}{} tem {}{}{} anos em {}{}{} e falta {}{}{} anos para o seu alistamento!'.format(cores['verde'], ano , cores['limpa'], cores['verde'], idade , cores['limpa'], cores['verde'], ano_atual , cores['limpa'], cores['verde'], falta , cores['limpa']))
     print('Você ainda vai se alistar ao serviço militar!')
     falta = idade_alistamento - idade
     print('Falta {}{}{} anos para o seu alistamento!'.format(cores['verde'], falta , cores['limpa']))
 elif idade > idade_alistamento and serviu == 1:
+    print('Quem nasceu em {}{}{} tem {}{}{} anos em {}{}{} e falta {}{}{} anos para o seu alistamento!'.format(cores['verde'], ano , cores['limpa'], cores['verde'], idade , cores['limpa'], cores['verde'], ano_atual , cores['limpa'], cores['verde'], falta , cores['limpa']))
     print('Você já fez o serviço militar!')
 elif idade > idade_alistamento and serviu == 2 :
+    print('Quem nasceu em {}{}{} tem {}{}{} anos em {}{}{} e passou {}{}{} anos para o seu alistamento!'.format(cores['verde'], ano , cores['limpa'], cores['verde'], idade , cores['limpa'], cores['verde'], ano_atual , cores['limpa'], cores['vermelho'], falta * -1 , cores['limpa']))
     print('Já passou do tempo e você não fez o serviço militar!')
     passou = idade - idade_alistamento
     print('Passou {}{}{} anos para do seu prazo alistamento!'.format(cores['vermelho'], passou , cores['limpa']))
 elif idade == idade_alistamento and serviu == 1 :
+    print('Quem nasceu em {}{}{} tem {}{}{} anos em {}{}{} e falta {}{}{} anos para o seu alistamento!'.format(cores['verde'], ano , cores['limpa'], cores['verde'], idade , cores['limpa'], cores['verde'], ano_atual , cores['limpa'], cores['verde'], falta , cores['limpa']))
     print('Esse ano você já se alistou no serviço militar!')
 elif idade ==  idade_alistamento and serviu == 2 :
+    print('Quem nasceu em {}{}{} tem {}{}{} anos em {}{}{} e falta {}{}{} anos para o seu alistamento!'.format(cores['verde'], ano , cores['limpa'], cores['verde'], idade , cores['limpa'], cores['verde'], ano_atual , cores['limpa'], cores['verde'], falta , cores['limpa']))
     print('Esse ano você precisa se alistar no serviço militar!')
 elif idade < idade_alistamento and serviu == 1 :
     print('Você está informando os dados errados!\nNão é possivel se alistar antes dos 18 anos de idade!')    
