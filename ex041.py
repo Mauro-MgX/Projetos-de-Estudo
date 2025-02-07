@@ -40,6 +40,7 @@ print('-='*20)
 
 sleep(3)
 
+print('Sua idade é: {}'.format(idade))
 if idade <= 9 :
     print('Sua catregoria  é {}MIRIM{}'.format(cores['azul'],cores['limpa']))
 elif idade <= 14 :

@@ -34,17 +34,14 @@ print('-='*20)
 
 sleep(3)
 
-
+print('Sua media foi {:.1f}'.format(media))
 if media < 5.0 :
-    print('Sua media foi {:.1f}'.format(media))
     print('Você foi {}REPROVADO{}!'.format(cores['vermelho'], cores['limpa']))
     print('Sua media não atingiu o valor minimo para a aprovação!')
 elif media > 5.0 and media < 6.9 :
-    print('Sua media foi {:.1f}'.format(media))
     print('Você ficou de {}RECUPERAÇÃO{}!'.format(cores['amarelo'], cores['limpa']))
     print('Sua media não atingiu o valor minimo para a aprovação!')
 elif media >= 7.0 :
-    print('Sua media foi {:.1f}'.format(media))
     print('Você foi {}APROVADO{}!'.format(cores['verde'], cores['limpa']))
     print('Sua media atingiu o valor para a aprovação!')
 
