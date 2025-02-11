@@ -35,29 +35,37 @@ tipo_pag = int(input(': '))
 
 parcelas = 0
 
-if tipo_pag == 3 :
-    print('Em quantas vezes você deseja parcelar: ')
-    parcelas = int(input(': ')) 
-
-print('-='*20)
-print('Processando...')
-print('-='*20)
-
-sleep(3)
 
 if tipo_pag == 1 :
-    desconto = valor * 10 / 100
-    valorf = valor - desconto
-    print('O valor a ser pago para pagamento a vista no Dinhiro ou Cheque é de R${}{}{}'.format(cores['azul'], valorf, cores['limpa']))
+    print('-='*20)
+    print('{:=^40}'.format('Processando...'))
+    print('-='*20)
+
+    sleep(3)
+    valorf = valor - (valor * 10 / 100)
+    print('O valor a ser pago para pagamento a vista no Dinhiro ou Cheque é de R${}{:.2f}{}'.format(cores['azul'], valorf, cores['limpa']))
 elif tipo_pag == 2 :
-    desconto = valor * 5 / 100
-    valorf = valor - desconto
-    print('O valor a ser pago para pagamento a vista no Cartão é de R${}{}{}'.format(cores['azul'], valorf, cores['limpa']))
-elif tipo_pag == 3 and parcelas <= 2 :
-    print('O valor a ser pago para pagamento en até 2x no Cartão é de R${}{}{}'.format(cores['azul'], valor, cores['limpa']))  
-elif tipo_pag == 3 and parcelas > 2 :    
-    juros = valor * 20 / 100
-    valorf = valor + juros
-    print('O valor a ser pago para pagamento 3x a mais no Cartão é de R${}{}{}'.format(cores['azul'], valorf, cores['limpa']))
+    valorf = valor - (valor * 5 / 100)
+    print('-='*20)
+    print('{:=^40}'.format('Processando...'))
+    print('-='*20)
+
+    sleep(3)
+    print('O valor a ser pago para pagamento a vista no Cartão é de R${}{:.2f}{}'.format(cores['azul'], valorf, cores['limpa']))
+elif tipo_pag == 3 :
+    print('Em quantas vezes você deseja parcelar: ')
+    parcelas = int(input(': ')) 
+    if parcelas >= 3 :
+        valorf = valor + (valor * 20 / 100)
+    else:
+        valorf = valor
+    print('-='*20)
+    print('{:=^40}'.format('Processando...'))
+    print('-='*20)
+
+    sleep(3)
+    print('O valor a ser pago para pagamento en até {}x no Cartão é de R${}{:.2f}{}'.format(parcelas ,cores['azul'], valorf, cores['limpa']))   
+else:
+    print('{}A opção digitada não existe!{}'.format(cores['vermelho'], cores['limpa']))   
 
 print('Obrigado por usar o sistema de Calculo de desconto na forma de pagamento! do {}Bot{}'.format(cores['azul'], cores['limpa']))            

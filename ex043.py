@@ -26,8 +26,8 @@ print('-='*20)
 print('Eu fui atualizado e estou com uma nova funcionalidade!')
 print('Calculo do IMC!')
 
-peso = float(input('Digite seu peso: '))
-altura = float(input('Digite sua altura: '))
+peso = float(input('Digite seu peso (Kg): '))
+altura = float(input('Digite sua altura (m): '))
 
 imc = peso / ( altura ** 2 )
 
@@ -41,12 +41,20 @@ sleep(3)
 if imc < 18.5 :
     print('Seu status com base no seu peso e altura é {}Abaixo do Peso{}'.format(cores['azul'], cores['limpa']))
 elif imc >= 18.5 and imc < 25 :
+#elif 18.5 <= imc < 25 :
     print('Seu status com base no seu peso e altura é {}Peso ideal{}'.format(cores['azul'], cores['limpa']))
 elif imc >= 25 and imc < 30 :
+#elif 25 <= imc < 30 :    
     print('Seu status com base no seu peso e altura é {}Sobrepeso{}'.format(cores['azul'], cores['limpa']))
 elif imc >= 30 and imc < 40 :
+#elif 30 <= imc < 40 :    
     print('Seu status com base no seu peso e altura é {}Obesidade{}'.format(cores['azul'], cores['limpa']))
-elif imc >= 40 :
+else: 
+#elif imc >= 40 :    
     print('Seu status com base no seu peso e altura é {}Obesidade mórbida{}'.format(cores['azul'], cores['limpa']))
 
-print('Obrigado por usar o sistema de Calculo do IMC! do {}Bot{}'.format(cores['azul'], cores['limpa']))        
+
+print('O IMC dessa pessoa é de {:.1f}'.format(imc))
+
+print('Obrigado por usar o sistema de Calculo do IMC! do {}Bot{}'.format(cores['azul'], cores['limpa']))
+        

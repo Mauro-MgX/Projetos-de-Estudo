@@ -15,6 +15,10 @@ cores = {'limpa':'\033[m',
          'branco':'\033[7;40m'
          }
 
+itens = ('Pedra', 'Tesoura', 'Papel')
+
+cores_itens = ('\033[36m', '\033[33m', '\033[32m')
+
 
 print('-='*20)
 print('Olá meu nome é {}Bot{}'.format(cores['azul'], cores['limpa']))
@@ -48,41 +52,33 @@ if começar == 1 :
     print('Vamos Começar!')
     print('-='*20)
 
-    print('Digite {}1{} para {}Pedra{} ?'.format(cores['azul'], cores['limpa'], cores['azul'], cores['limpa']))
-    print('Digite {}2{} para {}Tesoura{} ?'.format(cores['amarelo'], cores['limpa'], cores['amarelo'], cores['limpa']))
-    print('Digite {}3{} para {}Papel{} ?'.format(cores['verde'], cores['limpa'], cores['verde'], cores['limpa']))
+    print('Digite {}0{} para {}Pedra{}'.format(cores['azul'], cores['limpa'], cores['azul'], cores['limpa']))
+    print('Digite {}1{} para {}Tesoura{}'.format(cores['amarelo'], cores['limpa'], cores['amarelo'], cores['limpa']))
+    print('Digite {}2{} para {}Papel{}'.format(cores['verde'], cores['limpa'], cores['verde'], cores['limpa']))
     jogada_jogador = int(input(': '))
 
     print('-='*20)
-    print('Processando...')
+    print('JO')
+    sleep(1)
+    print('KEN')
+    sleep(1)
+    print('PO!')
     print('-='*20)
+    sleep(1)
 
-    sleep(3)
-
-    if jogada_jogador == 1 :
-        print('Você escolheu {}Pedra{}'.format(cores['azul'], cores['limpa']))
-    elif jogada_jogador == 2 :
-        print('Você escolheu {}Tesoura{}'.format(cores['amarelo'], cores['limpa']))
-    elif jogada_jogador == 3 :
-        print('Você escolheu {}Papel{}'.format(cores['verde'], cores['limpa']))
-
-    if jogada_pc == 1 :
-        print('O computador escolheu {}Pedra{}'.format(cores['azul'], cores['limpa']))
-    elif jogada_pc == 2 :
-        print('O computador escolheu {}Tesoura{}'.format(cores['amarelo'], cores['limpa']))
-    elif jogada_pc == 3 :
-        print('O computador escolheu {}Papel{}'.format(cores['verde'], cores['limpa']))
-    
-
-    if (jogada_pc == 1 and jogada_jogador == 1) or (jogada_pc == 2 and jogada_jogador == 2)  or (jogada_pc == 2 and jogada_jogador == 2) :
+    print('Você escolheu {}{}{}'.format(cores_itens[jogada_jogador], itens[jogada_jogador] , cores['limpa']))
+     
+    print('O computador escolheu {}{}{}'.format(cores_itens[jogada_pc], itens[jogada_pc], cores['limpa']))
+   
+    if (jogada_pc == 0 and jogada_jogador == 0) or (jogada_pc == 1 and jogada_jogador == 1)  or (jogada_pc == 2 and jogada_jogador == 2) :
         print('-='*20)
         print('DEU EMPATE')
         print('-='*20)
-    elif (jogada_jogador == 1 and jogada_pc == 2) or (jogada_jogador == 2 and jogada_pc == 3) or (jogada_jogador == 3 and jogada_pc == 1) : 
+    elif (jogada_jogador == 0 and jogada_pc == 1) or (jogada_jogador == 1 and jogada_pc == 2) or (jogada_jogador == 2 and jogada_pc == 0) : 
         print('-='*20)
         print('VOCÊ GANHOU!!')
         print('-='*20)
-    elif (jogada_pc == 1 and jogada_jogador == 2) or (jogada_pc == 2 and jogada_jogador == 3) or (jogada_pc == 3 and jogada_jogador == 1) :   
+    elif (jogada_pc == 0 and jogada_jogador == 1) or (jogada_pc == 1 and jogada_jogador == 2) or (jogada_pc == 2 and jogada_jogador == 0) :   
         print('-='*20)
         print('VOCÊ PERDEU!!')
         print('-='*20)

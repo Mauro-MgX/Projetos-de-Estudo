@@ -38,13 +38,15 @@ sleep(3)
 
 if lado1 < lado2 + lado3 and lado2 < lado1 + lado3 and lado3 < lado1 + lado2 :
     print('As 3 retas podem formar um triângulo')
-
-    if lado1 == lado2 and lado1 == lado3 and lado2 == lado3 :
+    #if lado1 == lado2 and lado2 == lado3 :
+    if lado1 == lado2 == lado3 :    
         print('O triângulo que pode ser feito {}Equilátero{}'.format(cores['azul'], cores['limpa']))
-    elif (lado1 == lado2 and lado2 != lado3) or (lado2 == lado3 and lado3 != lado1) or (lado1 == lado3 and lado3 != lado2) :
-        print('O triângulo que pode ser feito {}Isósceles{}'.format(cores['azul'], cores['limpa']))
-    elif lado1 != lado2 and lado1 != lado3 and lado2 != lado3 :
+    #elif lado1 != lado2 and lado1 != lado3 and lado2 != lado3 :
+    elif lado1 != lado2 != lado3 != lado1 :    
         print('O triângulo que pode ser feito {}Escaleno{}'.format(cores['azul'], cores['limpa']))
+    else:    
+    #elif (lado1 == lado2 and lado2 != lado3) or (lado2 == lado3 and lado3 != lado1) or (lado1 == lado3 and lado3 != lado2) :
+        print('O triângulo que pode ser feito {}Isósceles{}'.format(cores['azul'], cores['limpa']))    
 else:
     print('As 3 retas não podem formar um triângulo')    
 
